@@ -11,6 +11,12 @@
 		88B942FD2BD1977D00E7F5BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B942FC2BD1977D00E7F5BD /* ContentView.swift */; };
 		88B942FF2BD1977E00E7F5BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B942FE2BD1977E00E7F5BD /* Assets.xcassets */; };
 		88B943032BD1977E00E7F5BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B943022BD1977E00E7F5BD /* Preview Assets.xcassets */; };
+		88B9430C2BD198F500E7F5BD /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9430B2BD198F500E7F5BD /* Tab.swift */; };
+		88B9430E2BD19AE100E7F5BD /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9430D2BD19AE100E7F5BD /* HomeStack.swift */; };
+		88B943102BD19AEF00E7F5BD /* FavouriteStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B9430F2BD19AEF00E7F5BD /* FavouriteStack.swift */; };
+		88B943122BD19AFC00E7F5BD /* SettingsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B943112BD19AFC00E7F5BD /* SettingsStack.swift */; };
+		88B943152BD19CF300E7F5BD /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B943142BD19CF300E7F5BD /* AppData.swift */; };
+		88B943182BD19E2B00E7F5BD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B943172BD19E2B00E7F5BD /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,13 @@
 		88B942FE2BD1977E00E7F5BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B943002BD1977E00E7F5BD /* SwiftUI_Deep_Links_TabView_NavigationStack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_Deep_Links_TabView_NavigationStack.entitlements; sourceTree = "<group>"; };
 		88B943022BD1977E00E7F5BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88B9430B2BD198F500E7F5BD /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		88B9430D2BD19AE100E7F5BD /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
+		88B9430F2BD19AEF00E7F5BD /* FavouriteStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteStack.swift; sourceTree = "<group>"; };
+		88B943112BD19AFC00E7F5BD /* SettingsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStack.swift; sourceTree = "<group>"; };
+		88B943142BD19CF300E7F5BD /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		88B943172BD19E2B00E7F5BD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		88B943192BD1A36D00E7F5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +65,10 @@
 		88B942F92BD1977D00E7F5BD /* SwiftUI-Deep-Links-TabView-NavigationStack */ = {
 			isa = PBXGroup;
 			children = (
-				88B942FA2BD1977D00E7F5BD /* SwiftUI_Deep_Links_TabView_NavigationStackApp.swift */,
+				88B943192BD1A36D00E7F5BD /* Info.plist */,
+				88B943092BD198CD00E7F5BD /* App */,
+				88B943162BD19E1500E7F5BD /* View */,
+				88B9430A2BD198D500E7F5BD /* Model */,
 				88B942FC2BD1977D00E7F5BD /* ContentView.swift */,
 				88B942FE2BD1977E00E7F5BD /* Assets.xcassets */,
 				88B943002BD1977E00E7F5BD /* SwiftUI_Deep_Links_TabView_NavigationStack.entitlements */,
@@ -67,6 +83,42 @@
 				88B943022BD1977E00E7F5BD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88B943092BD198CD00E7F5BD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				88B942FA2BD1977D00E7F5BD /* SwiftUI_Deep_Links_TabView_NavigationStackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		88B9430A2BD198D500E7F5BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B9430B2BD198F500E7F5BD /* Tab.swift */,
+				88B943132BD19CDD00E7F5BD /* NavStack */,
+				88B943142BD19CF300E7F5BD /* AppData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88B943132BD19CDD00E7F5BD /* NavStack */ = {
+			isa = PBXGroup;
+			children = (
+				88B9430D2BD19AE100E7F5BD /* HomeStack.swift */,
+				88B9430F2BD19AEF00E7F5BD /* FavouriteStack.swift */,
+				88B943112BD19AFC00E7F5BD /* SettingsStack.swift */,
+			);
+			path = NavStack;
+			sourceTree = "<group>";
+		};
+		88B943162BD19E1500E7F5BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B943172BD19E2B00E7F5BD /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +191,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B9430C2BD198F500E7F5BD /* Tab.swift in Sources */,
+				88B943122BD19AFC00E7F5BD /* SettingsStack.swift in Sources */,
+				88B9430E2BD19AE100E7F5BD /* HomeStack.swift in Sources */,
 				88B942FD2BD1977D00E7F5BD /* ContentView.swift in Sources */,
 				88B942FB2BD1977D00E7F5BD /* SwiftUI_Deep_Links_TabView_NavigationStackApp.swift in Sources */,
+				88B943182BD19E2B00E7F5BD /* Home.swift in Sources */,
+				88B943102BD19AEF00E7F5BD /* FavouriteStack.swift in Sources */,
+				88B943152BD19CF300E7F5BD /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +332,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Deep-Links-TabView-NavigationStack/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -312,6 +371,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Deep-Links-TabView-NavigationStack/Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

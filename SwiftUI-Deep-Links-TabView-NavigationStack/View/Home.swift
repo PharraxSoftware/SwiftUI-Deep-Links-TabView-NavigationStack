@@ -7,33 +7,82 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct Home: View {
     @EnvironmentObject private var appData: AppData
     var body: some View {
         TabView(selection: $appData.activeTab,
                 content:  {
-            Text("adfas")
+            HomeView()
                 .tabItem {
-                    Image(systemName: Tab.home.symbolImage)
+                    Label(Tab.home.rawValue, systemImage: Tab.home.symbolImage)
                 }
+                .tag(Tab.home)
+            
+            FavouriteView()
+                .tabItem {
+                    Image(systemName: Tab.favourite.symbolImage)
+                }
+                .tag(Tab.favourite)
+            
+            SettingsView()
+                .tabItem {
+                    Image(systemName: Tab.settings.symbolImage)
+                }
+                .tag(Tab.settings)
         })
         .tint(.red)
     }
     
     @ViewBuilder
     func HomeView() -> some View {
-        NavigationStack {
-            List {
-                ForEach(HomeStack.allCases, id: \.rawValue) { link in
+        NavigationStack(path: $appData.homeStack) {
+            List(HomeStack.allCases, id: \.rawValue) {  link in
+             
+                    NavigationLink(value: link) {
+                        Text(link.rawValue)
+                    }
+            }
+            .navigationTitle("Home")
+            .navigationDestination(for: HomeStack.self) { link in
+                Text(link.rawValue + " View")
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func FavouriteView() -> some View {
+        NavigationStack(path: $appData.favouriteStack) {
+            LazyVStack {
+                ForEach(FavouriteStack.allCases, id: \.rawValue) { link in
                     NavigationLink(value: link) {
                         Text(link.rawValue)
                     }}
             }
             .navigationTitle("Home")
+            .navigationDestination(for: FavouriteStack.self) { link in
+                Text(link.rawValue + " View")
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func SettingsView() -> some View {
+        NavigationStack(path: $appData.settingsStack) {
+         
+            List(SettingsStack.allCases, id: \.rawValue) { link in
+                NavigationLink(value: link) {
+                    Text(link.rawValue)
+                }
+            }
+            .navigationTitle("Home")
+            .navigationDestination(for: SettingsStack.self) { link in
+                Text(link.rawValue + " View")
+            }
         }
     }
 }
 
 #Preview {
-    HomeView()
+    ContentView()
+        .environmentObject(AppData())
 }

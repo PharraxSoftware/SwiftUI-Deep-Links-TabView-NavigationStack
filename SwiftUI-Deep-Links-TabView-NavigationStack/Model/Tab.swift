@@ -12,14 +12,14 @@ import Foundation
 
 enum Tab: String, CaseIterable {
     case home = "Home"
-    case favorite = "Favorites"
+    case favourite = "Favourite"
     case settings = "Settings"
-
+    
     var symbolImage: String {
         switch self {
-        case .home: "house.fill"
-        case .favorite: "heart.fill"
-        case .settings: "gear"
+        case .home: return "house.fill"
+        case .favourite: return "heart.fill"
+        case .settings: return "gear"
         }
     }
     
